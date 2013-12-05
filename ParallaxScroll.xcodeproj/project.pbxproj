@@ -19,6 +19,9 @@
 		590F25001850C35B00D84727 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 590F24E81850C35B00D84727 /* UIKit.framework */; };
 		590F25081850C35B00D84727 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 590F25061850C35B00D84727 /* InfoPlist.strings */; };
 		590F250A1850C35B00D84727 /* ParallaxScrollTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 590F25091850C35B00D84727 /* ParallaxScrollTests.m */; };
+		590F25161850C37500D84727 /* Parallax_VC.m in Sources */ = {isa = PBXBuildFile; fileRef = 590F25141850C37500D84727 /* Parallax_VC.m */; };
+		590F25171850C37500D84727 /* Parallax_View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 590F25151850C37500D84727 /* Parallax_View.xib */; };
+		590F251B1850F2B200D84727 /* galaxy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 590F251A1850F2B200D84727 /* galaxy.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +51,10 @@
 		590F25051850C35B00D84727 /* ParallaxScrollTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ParallaxScrollTests-Info.plist"; sourceTree = "<group>"; };
 		590F25071850C35B00D84727 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		590F25091850C35B00D84727 /* ParallaxScrollTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ParallaxScrollTests.m; sourceTree = "<group>"; };
+		590F25131850C37500D84727 /* Parallax_VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Parallax_VC.h; sourceTree = "<group>"; };
+		590F25141850C37500D84727 /* Parallax_VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Parallax_VC.m; sourceTree = "<group>"; };
+		590F25151850C37500D84727 /* Parallax_View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Parallax_View.xib; sourceTree = "<group>"; };
+		590F251A1850F2B200D84727 /* galaxy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = galaxy.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +116,9 @@
 			children = (
 				590F24F31850C35B00D84727 /* AppDelegate.h */,
 				590F24F41850C35B00D84727 /* AppDelegate.m */,
+				590F25131850C37500D84727 /* Parallax_VC.h */,
+				590F25141850C37500D84727 /* Parallax_VC.m */,
+				590F25151850C37500D84727 /* Parallax_View.xib */,
 				590F24F61850C35B00D84727 /* Images.xcassets */,
 				590F24EB1850C35B00D84727 /* Supporting Files */,
 			);
@@ -118,6 +128,7 @@
 		590F24EB1850C35B00D84727 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				590F251A1850F2B200D84727 /* galaxy.jpg */,
 				590F24EC1850C35B00D84727 /* ParallaxScroll-Info.plist */,
 				590F24ED1850C35B00D84727 /* InfoPlist.strings */,
 				590F24F01850C35B00D84727 /* main.m */,
@@ -219,8 +230,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				590F25171850C37500D84727 /* Parallax_View.xib in Resources */,
 				590F24EF1850C35B00D84727 /* InfoPlist.strings in Resources */,
 				590F24F71850C35B00D84727 /* Images.xcassets in Resources */,
+				590F251B1850F2B200D84727 /* galaxy.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +253,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				590F24F51850C35B00D84727 /* AppDelegate.m in Sources */,
+				590F25161850C37500D84727 /* Parallax_VC.m in Sources */,
 				590F24F11850C35B00D84727 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -359,6 +373,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ParallaxScroll/ParallaxScroll-Prefix.pch";
 				INFOPLIST_FILE = "ParallaxScroll/ParallaxScroll-Info.plist";
@@ -372,6 +387,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ParallaxScroll/ParallaxScroll-Prefix.pch";
 				INFOPLIST_FILE = "ParallaxScroll/ParallaxScroll-Info.plist";

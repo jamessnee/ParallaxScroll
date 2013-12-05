@@ -7,14 +7,16 @@
 //
 
 #import "AppDelegate.h"
+#import "Parallax_VC.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
+    Parallax_VC *paraVC = [[Parallax_VC alloc] initWithNibName:@"Parallax_View" bundle:nil];
+    self.window.rootViewController = paraVC;
+    
     [self.window makeKeyAndVisible];
     return YES;
 }
