@@ -8,7 +8,8 @@
 
 #import "Parallax_VC.h"
 
-#define kSCROLL_FACTOR 2
+#define kScrollFactor 2
+#define kForegroundOffset 200
 
 @interface Parallax_VC ()
 
@@ -39,16 +40,16 @@
     [self.foregroundScroll setContentSize:CGSizeMake(self.foregroundContainer.frame.size.width,
                                                      self.foregroundContainer.frame.size.height)];
     
-    [self.foregroundScroll setContentOffset:CGPointMake(0, -200)];
-    [self.foregroundScroll setContentInset:UIEdgeInsetsMake(200.0, 0.0, 0.0, 0.0)];
+    [self.foregroundScroll setContentOffset:CGPointMake(0, (0-kForegroundOffset))];
+    [self.foregroundScroll setContentInset:UIEdgeInsetsMake(kForegroundOffset, 0.0, 0.0, 0.0)];
 }
 
 #pragma mark - UIScrollView Delegate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
     CGPoint offsetBg = self.backgroundScroll.contentOffset;
-    offsetBg.y = self.foregroundScroll.contentOffset.y / kSCROLL_FACTOR;
-    offsetBg.y += 200;
+    offsetBg.y = self.foregroundScroll.contentOffset.y / kScrollFactor;
+    offsetBg.y += kForegroundOffset;
     [self.backgroundScroll setContentOffset:offsetBg];
 }
 
